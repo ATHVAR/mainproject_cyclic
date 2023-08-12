@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en" data-critters-container>
+<head>
+  <meta charset="utf-8">
+  <title>ICT Learner Tracker</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+  <!-- <link rel="icon" type="image/x-icon" href="favicon.ico"> -->
+  
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  <!-- Bootstrap Icons CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style type="text/css">@font-face{font-family:'Poppins';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLDz8Z11lFd2JQEl8qw.woff2) format('woff2');unicode-range:U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FF;}@font-face{font-family:'Poppins';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLDz8Z1JlFd2JQEl8qw.woff2) format('woff2');unicode-range:U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Poppins';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLDz8Z1xlFd2JQEk.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'Poppins';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLGT9Z11lFd2JQEl8qw.woff2) format('woff2');unicode-range:U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FF;}@font-face{font-family:'Poppins';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLGT9Z1JlFd2JQEl8qw.woff2) format('woff2');unicode-range:U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Poppins';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLGT9Z1xlFd2JQEk.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}@font-face{font-family:'Poppins';font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLEj6Z11lFd2JQEl8qw.woff2) format('woff2');unicode-range:U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FF;}@font-face{font-family:'Poppins';font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLEj6Z1JlFd2JQEl8qw.woff2) format('woff2');unicode-range:U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Poppins';font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLEj6Z1xlFd2JQEk.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}</style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<style>html{--mat-option-selected-state-label-text-color:#3f51b5;--mat-option-label-text-color:rgba(0, 0, 0, .87);--mat-option-hover-state-layer-color:rgba(0, 0, 0, .04);--mat-option-focus-state-layer-color:rgba(0, 0, 0, .04);--mat-option-selected-state-layer-color:rgba(0, 0, 0, .04)}html{--mat-optgroup-label-text-color:rgba(0, 0, 0, .87)}html{--mat-option-label-text-font:Roboto, sans-serif;--mat-option-label-text-line-height:24px;--mat-option-label-text-size:16px;--mat-option-label-text-tracking:.03125em;--mat-option-label-text-weight:400}html{--mat-optgroup-label-text-font:Roboto, sans-serif;--mat-optgroup-label-text-line-height:24px;--mat-optgroup-label-text-size:16px;--mat-optgroup-label-text-tracking:.03125em;--mat-optgroup-label-text-weight:400}html{--mat-select-panel-background-color:white;--mat-select-enabled-trigger-text-color:rgba(0, 0, 0, .87);--mat-select-disabled-trigger-text-color:rgba(0, 0, 0, .38);--mat-select-placeholder-text-color:rgba(0, 0, 0, .6);--mat-select-enabled-arrow-color:rgba(0, 0, 0, .54);--mat-select-disabled-arrow-color:rgba(0, 0, 0, .38);--mat-select-focused-arrow-color:rgba(63, 81, 181, .87);--mat-select-invalid-arrow-color:rgba(244, 67, 54, .87)}html{--mat-select-trigger-text-font:Roboto, sans-serif;--mat-select-trigger-text-line-height:24px;--mat-select-trigger-text-size:16px;--mat-select-trigger-text-tracking:.03125em;--mat-select-trigger-text-weight:400}html{--mat-autocomplete-background-color:white}html{--mat-menu-item-label-text-color:rgba(0, 0, 0, .87);--mat-menu-item-icon-color:rgba(0, 0, 0, .87);--mat-menu-item-hover-state-layer-color:rgba(0, 0, 0, .04);--mat-menu-item-focus-state-layer-color:rgba(0, 0, 0, .04);--mat-menu-container-color:white}html{--mat-menu-item-label-text-font:Roboto, sans-serif;--mat-menu-item-label-text-size:16px;--mat-menu-item-label-text-tracking:.03125em;--mat-menu-item-label-text-line-height:24px;--mat-menu-item-label-text-weight:400}html{--mat-paginator-container-text-color:rgba(0, 0, 0, .87);--mat-paginator-container-background-color:white;--mat-paginator-enabled-icon-color:rgba(0, 0, 0, .54);--mat-paginator-disabled-icon-color:rgba(0, 0, 0, .12)}html{--mat-paginator-container-size:56px}html{--mat-paginator-container-text-font:Roboto, sans-serif;--mat-paginator-container-text-line-height:20px;--mat-paginator-container-text-size:12px;--mat-paginator-container-text-tracking:.0333333333em;--mat-paginator-container-text-weight:400;--mat-paginator-select-trigger-text-size:12px}html{--mdc-checkbox-disabled-selected-icon-color:rgba(0, 0, 0, .38);--mdc-checkbox-disabled-unselected-icon-color:rgba(0, 0, 0, .38);--mdc-checkbox-selected-checkmark-color:#fff;--mdc-checkbox-selected-focus-icon-color:#ff4081;--mdc-checkbox-selected-hover-icon-color:#ff4081;--mdc-checkbox-selected-icon-color:#ff4081;--mdc-checkbox-selected-pressed-icon-color:#ff4081;--mdc-checkbox-unselected-focus-icon-color:#212121;--mdc-checkbox-unselected-hover-icon-color:#212121;--mdc-checkbox-unselected-icon-color:rgba(0, 0, 0, .54);--mdc-checkbox-unselected-pressed-icon-color:rgba(0, 0, 0, .54);--mdc-checkbox-selected-focus-state-layer-color:#ff4081;--mdc-checkbox-selected-hover-state-layer-color:#ff4081;--mdc-checkbox-selected-pressed-state-layer-color:#ff4081;--mdc-checkbox-unselected-focus-state-layer-color:black;--mdc-checkbox-unselected-hover-state-layer-color:black;--mdc-checkbox-unselected-pressed-state-layer-color:black}html{--mdc-checkbox-state-layer-size:40px}html{--mat-bottom-sheet-container-text-color:rgba(0, 0, 0, .87);--mat-bottom-sheet-container-background-color:white}html{--mat-bottom-sheet-container-text-font:Roboto, sans-serif;--mat-bottom-sheet-container-text-line-height:20px;--mat-bottom-sheet-container-text-size:14px;--mat-bottom-sheet-container-text-tracking:.0178571429em;--mat-bottom-sheet-container-text-weight:400}html{--mat-legacy-button-toggle-text-color:rgba(0, 0, 0, .38);--mat-legacy-button-toggle-state-layer-color:rgba(0, 0, 0, .12);--mat-legacy-button-toggle-selected-state-text-color:rgba(0, 0, 0, .54);--mat-legacy-button-toggle-selected-state-background-color:#e0e0e0;--mat-legacy-button-toggle-disabled-state-text-color:rgba(0, 0, 0, .26);--mat-legacy-button-toggle-disabled-state-background-color:#eeeeee;--mat-legacy-button-toggle-disabled-selected-state-background-color:#bdbdbd;--mat-standard-button-toggle-text-color:rgba(0, 0, 0, .87);--mat-standard-button-toggle-background-color:white;--mat-standard-button-toggle-state-layer-color:black;--mat-standard-button-toggle-selected-state-background-color:#e0e0e0;--mat-standard-button-toggle-selected-state-text-color:rgba(0, 0, 0, .87);--mat-standard-button-toggle-disabled-state-text-color:rgba(0, 0, 0, .26);--mat-standard-button-toggle-disabled-state-background-color:white;--mat-standard-button-toggle-disabled-selected-state-text-color:rgba(0, 0, 0, .87);--mat-standard-button-toggle-disabled-selected-state-background-color:#bdbdbd;--mat-standard-button-toggle-divider-color:#e0e0e0}html{--mat-standard-button-toggle-height:48px}html{--mat-legacy-button-toggle-text-font:Roboto, sans-serif;--mat-standard-button-toggle-text-font:Roboto, sans-serif}html{--mat-divider-color:rgba(0, 0, 0, .12)}html{--mat-expansion-container-background-color:white;--mat-expansion-container-text-color:rgba(0, 0, 0, .87);--mat-expansion-actions-divider-color:rgba(0, 0, 0, .12);--mat-expansion-header-hover-state-layer-color:rgba(0, 0, 0, .04);--mat-expansion-header-focus-state-layer-color:rgba(0, 0, 0, .04);--mat-expansion-header-disabled-state-text-color:rgba(0, 0, 0, .26);--mat-expansion-header-text-color:rgba(0, 0, 0, .87);--mat-expansion-header-description-color:rgba(0, 0, 0, .54);--mat-expansion-header-indicator-color:rgba(0, 0, 0, .54)}html{--mat-expansion-header-collapsed-state-height:48px;--mat-expansion-header-expanded-state-height:64px}html{--mat-expansion-header-text-font:Roboto, sans-serif;--mat-expansion-header-text-size:14px;--mat-expansion-header-text-weight:500;--mat-expansion-header-text-line-height:inherit;--mat-expansion-header-text-tracking:inherit;--mat-expansion-container-text-font:Roboto, sans-serif;--mat-expansion-container-text-line-height:20px;--mat-expansion-container-text-size:14px;--mat-expansion-container-text-tracking:.0178571429em;--mat-expansion-container-text-weight:400}html{--mat-sidenav-container-divider-color:rgba(0, 0, 0, .12);--mat-sidenav-container-background-color:white;--mat-sidenav-container-text-color:rgba(0, 0, 0, .87);--mat-sidenav-content-background-color:#fafafa;--mat-sidenav-content-text-color:rgba(0, 0, 0, .87);--mat-sidenav-scrim-color:rgba(0, 0, 0, .6)}html{--mat-stepper-header-icon-foreground-color:white;--mat-stepper-header-selected-state-icon-background-color:#3f51b5;--mat-stepper-header-selected-state-icon-foreground-color:white;--mat-stepper-header-done-state-icon-background-color:#3f51b5;--mat-stepper-header-done-state-icon-foreground-color:white;--mat-stepper-header-edit-state-icon-background-color:#3f51b5;--mat-stepper-header-edit-state-icon-foreground-color:white;--mat-stepper-container-color:white;--mat-stepper-line-color:rgba(0, 0, 0, .12);--mat-stepper-header-hover-state-layer-color:rgba(0, 0, 0, .04);--mat-stepper-header-focus-state-layer-color:rgba(0, 0, 0, .04);--mat-stepper-header-label-text-color:rgba(0, 0, 0, .54);--mat-stepper-header-optional-label-text-color:rgba(0, 0, 0, .54);--mat-stepper-header-selected-state-label-text-color:rgba(0, 0, 0, .87);--mat-stepper-header-error-state-label-text-color:#f44336;--mat-stepper-header-icon-background-color:rgba(0, 0, 0, .54);--mat-stepper-header-error-state-icon-foreground-color:#f44336;--mat-stepper-header-error-state-icon-background-color:transparent}html{--mat-stepper-header-height:72px}html{--mat-stepper-container-text-font:Roboto, sans-serif;--mat-stepper-header-label-text-font:Roboto, sans-serif;--mat-stepper-header-label-text-size:14px;--mat-stepper-header-label-text-weight:400;--mat-stepper-header-error-state-label-text-size:16px;--mat-stepper-header-selected-state-label-text-size:16px;--mat-stepper-header-selected-state-label-text-weight:400}html{--mat-toolbar-container-background-color:whitesmoke;--mat-toolbar-container-text-color:rgba(0, 0, 0, .87)}html{--mat-toolbar-standard-height:64px;--mat-toolbar-mobile-height:56px}html{--mat-toolbar-title-text-font:Roboto, sans-serif;--mat-toolbar-title-text-line-height:32px;--mat-toolbar-title-text-size:20px;--mat-toolbar-title-text-tracking:.0125em;--mat-toolbar-title-text-weight:500}body{background:linear-gradient(to bottom,#87CEFA,#ffffff)}.page-wrapper{position:relative;bottom:0;width:100%;z-index:11111;top:0;margin-top:0;padding-top:0}footer p,footer{color:#b0b0b0}.footer-top{background:#303030;background-size:cover;background-position:center;padding:30px 0 20px;font-family:rubik}.footer-top,.footer-bottom{background-color:#1c1f2f}.footer-bottom{padding:15px 0;border-top:1px solid #313646;background-color:#181828!important;color:#b0b0b0;font-family:rubik;color:#99a9b5}.footer-site-info{font-size:92.86%}#footer-navigation,#footer-navigation li a:hover{color:#fff}.footer-bottom ul{margin:0}.inline-inside{font-size:0;line-height:0}.clearfix:after,.clearfix:before{content:"";display:table}#footer-menu li{display:inline-block;padding:0 21px;position:relative;line-height:1}#footer-navigation,#footer-navigation li a{color:#99a9b5;padding-top:15px}#footer-menu li+li:before{content:"";width:0;height:100%;position:absolute;left:-1px;top:0;font-size:0;border-left:1px solid #232234;border-right:1px solid #333146}#footer-socials{text-align:right}#footer-socials .socials{text-align:right;margin:0 -7px;display:inline-block;vertical-align:middle}a.socials-item{display:inline-block;vertical-align:top;text-align:center;transition:all .3s;margin:0 5px;line-height:16px;padding:10px;border-radius:50%;background-color:#141421;border:1px solid #2e2e4c;box-shadow:3px 9px 16px #0006,-3px -3px 10px #ffffff0f,inset 14px 14px 26px #0000004d,inset -3px -3px 15px #ffffff0d}.socials-item i{display:inline-block;width:1em;height:1em;line-height:1;font-size:16px;text-align:center;vertical-align:top;font-feature-settings:normal;font-kerning:auto;font-language-override:normal;font-size-adjust:none;font-stretch:normal;font-style:normal;font-synthesis:weight style;font-variant:normal;font-weight:400;text-rendering:auto}.facebook{color:#4e64b5}.instagram{color:#9a8f62}.youtube{color:#c82929}a.socials-item:hover{box-shadow:0 0 20px #54014ab3;border-color:#ff06e09c;background:linear-gradient(to right,rgba(255,9,9,.12941176470588237),#c000ffb5,rgba(255,0,94,.14))}.footer-bottom a:hover{color:#fff}.widget{margin-bottom:50px}.footer-title{margin-bottom:40px;color:#fff;font-weight:500;text-transform:capitalize;padding-bottom:15px;font-size:16px}.footer-title:after{width:50px;background:#fff;opacity:.2;height:1px;content:"";position:absolute;bottom:0;left:0}.gem-contacts-item{padding-top:10px;font-size:15px}.gem-contacts-item i{padding-right:10px}.posts li{border-bottom:1px solid #393d50;padding-bottom:12px;padding-top:6px}footer p,footer li{font-size:15px;line-height:22px}.gem-pp-posts-date{color:#00bcd4;font-size:89.5%}footer p{line-height:24px;margin-bottom:10px;font-size:15px}.wpcf7-form-control-wrap .wpcf7-form-control{padding:7px!important;width:100%}.wpcf7-form-control-wrap input{background:#1c1f2f;overflow:hidden;border:1px solid #2e344d;background-color:#1c1f2f;box-shadow:10px 10px 36px #00000080,-13px -13px 23px #ffffff08;border-radius:5px;transition:all .3s ease-in-out 0s}.wpcf7-form-control-wrap input:hover{background-color:transparent;box-shadow:10px 10px 36px #00000080,-13px -13px 23px #ffffff08,inset 14px 14px 70px #0003,inset -15px -15px 30px #ffffff0a;border-color:#fff3;color:#fff}.wpcf7 .wpcf7-form .contact-form-footer textarea{height:160px;width:100%}.wpcf7-form-control-wrap textarea:hover{background-color:transparent;box-shadow:10px 10px 36px #00000080,-13px -13px 23px #ffffff08,inset 14px 14px 70px #0003,inset -15px -15px 30px #ffffff0a;border-color:#fff3;color:#fff}.wpcf7-form-control-wrap textarea{background:#1c1f2f;overflow:hidden;border:1px solid #2e344d;background-color:#1c1f2f;box-shadow:10px 10px 36px #00000080,-13px -13px 23px #ffffff08;border-radius:5px;transition:all .3s ease-in-out 0s}textarea{overflow:auto;resize:vertical}.wpcf7 .wpcf7-form .contact-form-footer .wpcf7-submit{width:100%;padding:11px;margin:0;line-height:0}.wpcf7-form .contact-form-footer .wpcf7-submit{background-color:#394050;color:#99a9b5;border:none;cursor:pointer;padding:15px 40px;font-size:14px;font-weight:400;transition:all .5s;letter-spacing:2px;color:#ffffff80;box-shadow:none;text-transform:uppercase;outline:none!important;background-color:#1c1f2f;border-radius:5px;min-width:140px;box-shadow:3px 9px 16px #0006,-3px -3px 10px #ffffff0f,inset 14px 14px 26px #0000004d,inset -3px -3px 15px #ffffff0d;border-width:1px 0px 0px 1px;border-style:solid;border-color:#2e344d;transition:all .3s ease-in-out 0s}.wpcf7-form .contact-form-footer .wpcf7-submit:hover{box-shadow:0 0 20px #54014ab3;border-color:#ff06e09c;background:linear-gradient(to right,rgba(255,9,9,.12941176470588237),#c000ffb5,rgba(255,0,94,.14));color:#fff}footer .widget ul{list-style:none;margin-top:5px}#waterdrop{height:30px}.footer-site-info{padding-top:10px}</style><link rel="stylesheet" href="styles.5588f8c1eb5dab01.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.5588f8c1eb5dab01.css"></noscript></head>
+<body>
+  <app-root></app-root>
+  <!-- Footer -->
+  <footer>
+    <div class="page-wrapper">
+      <div id="waterdrop"></div>
+      <footer>
+        <div class="footer-top">
+          <div class="pt-exebar ">
+          </div>
+          <div class="container ">
+            <div class="row d-flex justify-content-evenly">
+              <div class="col-lg-3 col-md-12 col-sm-12 footer-col-3">
+                <div class="widget footer_widget">
+                  <h5 class="footer-title text-center">Address</h5>
+                  <div class="gem-contacts">
+                    <div class="gem-contacts-item gem-contacts-address">G1, Ground Floor, Thejaswini, Technopark Campus
+                      Thiruvananthapuram, Kerala, India - 695 581
+                    </div>
+                    <div class="gem-contacts-item gem-contacts-phone"><i class="fa fa-phone" aria-hidden="true"></i> Phone: <a> +91 471 270 0811</a></div>
+                    <div class="gem-contacts-item gem-contacts-address mt-2">2nd Floor, UL Cyberpark Building, Nellikode Post
+                      Kozhikode, Kerala, India - 673 016
+                     </div>
+                    <div class="gem-contacts-item gem-contacts-phone"><i class="fa fa-phone" aria-hidden="true"></i> Phone: <a>+91 495 243 1432</a></div>    
+                    <div class="gem-contacts-item gem-contacts-address mt-2">Ground Floor, Rajamally Building, Infopark
+                      Koratty, Thrissur, Kerala, India - 680 308
+                     </div>
+                    <div class="gem-contacts-item gem-contacts-phone"><i class="fa fa-phone" aria-hidden="true"></i> Phone: <a>+91 480 273 1050</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6 col-md-6 col-sm-12 d-flex">
+                <div class="row ">
+                  <div class="col-6 col-lg-6 col-md-6 col-sm-6">
+                    <div class="widget footer_widget text-center">
+                      <h5 class="footer-title">Contact Us</h5>
+                      <ul class="posts  styled">
+                        <li class="clearfix gem-pp-posts">
+                          <div class="gem-pp-posts-text">
+                            <div class="gem-pp-posts-date">+91 79 075 58161</div>
+                          </div>
+                        </li>
+                        <li class="clearfix gem-pp-posts">
+                          <div class="gem-pp-posts-text">
+                            <div class="gem-pp-posts-date">info@ictkerala.org</div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-6 col-lg-6 col-md-6 col-sm-6">
+                    <div class="widget text-center">
+                      <h5 class="footer-title">Email Us</h5>
+                      <div class="textwidget">
+                        <div role="form" class="wpcf7" id="wpcf7-f4-o1" lang="en-US" dir="ltr">
+                          <form class="wpcf7-form" novalidate="novalidate">
+                            <div class="contact-form-footer">
+                              <p><span class="wpcf7-form-control-wrap your-first-name"><input type="text" name="your-first-name" value size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" placeholder="Your name"></span></p>
+                              <p><span class="wpcf7-form-control-wrap your-email_1"><input type="email" name="your-email_1" value size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email" aria-invalid="false" placeholder="Your email"></span></p>
+                              <p><span class="wpcf7-form-control-wrap your-message"><textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Your message"></textarea></span></p>
+                              <div><input type="button" onclick="alert(`Thank You for Contacting`)" value="Send" class="wpcf7-form-control wpcf7-submit"><span class="ajax-loader"></span></div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        <div class="footer-bottom">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="footer-site-info">2023 © <a target="_blank">ICTAK Learner App </a></div>
+              </div>
+              <div class="col-md-6">
+                <nav id="footer-navigation" class="site-navigation footer-navigation centered-box" role="navigation">
+                  <ul id="footer-menu" class="nav-menu styled clearfix inline-inside">
+                    <li id="menu-item-26" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26"><a href="#"></a></li>
+                    <li id="menu-item-27" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-27"><a href="#"></a></li>
+                    <li id="menu-item-28" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28"><a href="#"></a></li>
+                    <li id="menu-item-29" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-29"><a href="#"></a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="col-md-3">
+                <div id="footer-socials">
+                  <div class="socials inline-inside socials-colored">
+                    <a href="https://www.facebook.com/ictkerala/" target="_blank" title="Facebook" class="socials-item">
+                      <i class="fab fa-facebook-f facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/ictkerala/?hl=en" target="_blank" title="Instagram" class="socials-item">
+                      <i class="fab fa-instagram instagram"></i>
+                    </a>
+                    <a href="https://www.youtube.com/user/ictkerala" target="_blank" title="YouTube" class="socials-item">
+                      <i class="fab fa-youtube youtube"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div></div></div></footer>
+    </div>
+  </footer>
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <script src="https://daniellaharel.com/raindrops/js/raindrops.js"></script>
+  <script> jQuery('#waterdrop').raindrops({color:'#1c1f2f', canvasHeight:150, density: 0.1, frequency: 20});</script>
+
+<script src="runtime.7774ff81d752b5d3.js" type="module"></script><script src="polyfills.f4147229dfb95be6.js" type="module"></script><script src="main.18a9c3cb8a65c14b.js" type="module"></script></body>
+</html>
